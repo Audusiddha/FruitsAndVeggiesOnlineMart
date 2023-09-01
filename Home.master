@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Admin_Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../Boostrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" rel="stylesheet" />  
+
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+     <style type="text/css">
+         .auto-style1 {
+             width: 100%;
+             height: 60px;
+         }
+         .auto-style2 {
+             height: 70px;
+         }        
+          body{
+        background-color: #080710;
+        background-image: url('../images/slide.jpg');
+        background-size:1500px,1200px;
+        }
+         </style>    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <table class="auto-style1">
+             <tr>
+              <td style="font-family: 'Times New Roman', Times, serif; font-size: 22pt; color:snow; vertical-align:top; text-align: center; background-color: green; border: 1px solid #000000" class="auto-style2">
+                 Fresh Fruits & Vegetables 
+                  <div style="text-align:right;font-size:14pt;font-family:Bahnschrift">
+                     
+                       <asp:LinkButton ID="lnkBtnLogout" runat="server" Font-Italic="False" Font-Size="10pt" ForeColor="Black" CssClass="btn btn-warning" CausesValidation="False" OnClick="lnkBtnLogout_Click">Logout...</asp:LinkButton><span class="glyphicon glyphicon-log-out" style="color: #333333;"></span></td>
+
+                  </div>
+                 </td>
+             </tr>
+             <tr>
+                <td style="border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-color: #000000; border-right-color: #000000; border-left-color: #000000;">
+                <ul class="nav nav-tabs">
+                    <li role="presentation"> <a href="Default.aspx" style=" border: 1px solid #990099; font-size: 11pt; text-align: center;"><span class="glyphicon glyphicon-home"></span> Home </a> </li>
+                      <li role="presentation"> <a href="AddCategory.aspx" style=" border: 1px solid #990099; font-size: 11pt; text-align: center;"> Add Category </a> </li>
+                      <li role="presentation"> <a href="AddItem.aspx" style=" border: 1px solid #990099; font-size: 11pt; text-align: center;"> Product Entry </a> </li>
+                      <li role="presentation"> <a href="ProductDetails.aspx" style=" border: 1px solid #990099; font-size: 11pt; text-align: center;"> Product Details </a> </li>
+                     <li role="presentation"> <a href="ViewOrder.aspx" style=" border: 1px solid #990099; font-size: 11pt; text-align: center;"> View Orders </a> </li>
+                     <li role="presentation"> <a href="Feedback.aspx" style=" border: 1px solid #990099; font-size: 11pt; text-align: center;"> View Feedbacks </a> </li>
+                     <li role="presentation"> <a href="changePassword.aspx" style=" border: 1px solid #990099; font-size: 11pt; text-align: center;"> Change Password </a> </li>
+                    </ul>
+                     </td>
+             </tr>
+             <tr >
+          <td valign="top" >
+               <div>
+             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">                
+        </asp:ContentPlaceHolder>
+        </div> 
+          </td>                 
+             </tr>
+         </table>                    
+          </div>
+         <script src="../Boostrap/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>       
+    </form>
+</body>
+</html>
